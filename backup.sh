@@ -67,7 +67,7 @@ cd "$BACKUP_DIR"
 git add -A
 if [ -n "$(git status --porcelain)" ]; then
   git commit -m "Backup $DATE" --quiet
-  git push origin master --quiet 2>&1 | tail -1 || true
+  git push origin main --quiet 2>&1 | tail -1 || true
   echo "backup repo pushed"
 else
   echo "nothing new in backup repo"
